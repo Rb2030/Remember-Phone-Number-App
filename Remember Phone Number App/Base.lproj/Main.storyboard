@@ -1,14 +1,19 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Remember_Phone_Number_App" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +21,51 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your number here..." textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ok9-1D-xH9">
+                                <rect key="frame" x="94.5" y="117" width="185.5" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please enter your phone number" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F1F-11-dri">
+                                <rect key="frame" x="14" y="53" width="347" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9n3-gc-pIg">
+                                <rect key="frame" x="151" y="183" width="72" height="30"/>
+                                <state key="normal" title="Submit"/>
+                                <connections>
+                                    <action selector="arrayObject:" destination="BYZ-38-t0r" eventType="touchUpInside" id="e0g-u1-MlV"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="9n3-gc-pIg" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="148" id="53C-2j-Uej"/>
+                            <constraint firstItem="9n3-gc-pIg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Myh-Cq-XKC"/>
+                            <constraint firstItem="Ok9-1D-xH9" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="N8w-89-gre"/>
+                            <constraint firstAttribute="trailing" secondItem="F1F-11-dri" secondAttribute="trailing" constant="14" id="ONG-Gc-hFi"/>
+                            <constraint firstItem="9n3-gc-pIg" firstAttribute="top" secondItem="Ok9-1D-xH9" secondAttribute="bottom" constant="35" id="P4e-ee-zBJ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Ok9-1D-xH9" secondAttribute="trailing" constant="79" id="PX5-yi-ktf"/>
+                            <constraint firstItem="F1F-11-dri" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ZjA-Np-Ggd"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="9n3-gc-pIg" secondAttribute="trailing" constant="149" id="foD-Wh-CeS"/>
+                            <constraint firstItem="F1F-11-dri" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="33" id="oRe-nR-xvO"/>
+                            <constraint firstItem="Ok9-1D-xH9" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="78.5" id="rPY-pF-cu4"/>
+                            <constraint firstItem="Ok9-1D-xH9" firstAttribute="top" secondItem="F1F-11-dri" secondAttribute="bottom" constant="43" id="rQe-Je-1L4"/>
+                            <constraint firstItem="F1F-11-dri" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="14" id="s2R-LQ-P4X"/>
+                            <constraint firstItem="Ok9-1D-xH9" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="97" id="zpE-P9-b7k"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="arrayObject" destination="Ok9-1D-xH9" id="Zqw-cg-rLf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-79.200000000000003" y="136.28185907046478"/>
         </scene>
     </scenes>
 </document>

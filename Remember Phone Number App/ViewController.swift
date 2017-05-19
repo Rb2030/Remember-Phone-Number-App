@@ -10,9 +10,22 @@ import UIKit
 
 class ViewController: UIViewController {
 
+
+   
+       
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+    
+        let arrayObject = UserDefaults.standard.object(forKey: "phone number")
+        
+        if let array = arrayObject as? NSArray {
+            
+            print(array)
+            
+        }
+    
+    
     }
 
     override func didReceiveMemoryWarning() {
